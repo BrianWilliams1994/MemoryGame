@@ -6,7 +6,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <h1> Hello </h1>
+    <h1> <%="Hello #{@result || ""}"%></h1>
+    <form method='post' action='/guess'>
+      <input type='submit' value="Guess">
+    </form>
   </body>
 </html>
 
