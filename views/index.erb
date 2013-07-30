@@ -4,10 +4,31 @@
     <title> ThoughtWorks Memory Game
     </title>
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/css1.css" rel="stylesheet"  type="text/css"> </link>
   </head>
   <body>
-    <h1> <%="Hello #{@result || ""}"%></h1>
+		<nav>
+			<ul> 
+			<li><a href="index.html"> Home </a> </li>
+			<li><a href="tw.html"> ThoughtWorkers  </a> </li>
+			<li><a href="dev.html"> Developers </a> </li>
+			</ul>
+		</nav>
+		
+		<h1>
+			Welcome To ThoughtWorks Memory Game
+		</h1>
+			
     <form method='post' action='/guess'>
+			<table>
+        <% game.rows.each do |row| %>
+          <tr>
+            <% row.each do |card| %>
+              <th><%= card %></th>
+            <%end%>
+			  </tr>
+      <%end%>
+			</table>
       <input type='submit' value="Guess">
     </form>
   </body>
