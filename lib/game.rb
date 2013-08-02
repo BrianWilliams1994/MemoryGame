@@ -5,6 +5,11 @@ class Game
   end
 
   def rows
+      
+      ['Brian', 'Emily', 'Joe', 'Ben', 'Josh', 'Miguel', 'Matt', 'Phil'] * 2
+
+      @tile_values.shuffle
+      
     # Your code here
     # create the board randomly
     # each tile value shoudl appear twice in the finished board
