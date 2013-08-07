@@ -21,10 +21,13 @@
 			
     <form method='post' action='/guess'>
 			<table>
-        <% game.grid.each do |row| %>
+        <% game.grid.each_with_index do |row, row_number| %>
           <tr>
-            <% row.each do |card| %>
-              <th><%= card %></th>
+            <% row.each_with_index do |card, column_number| %>
+              <th>
+                <input type='radio' name='<%="#{row_number}_#{column_number}"%>'>
+                <%= card.name %>
+              </th>
             <%end%>
 			  </tr>
       <%end%>

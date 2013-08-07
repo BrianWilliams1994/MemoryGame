@@ -1,3 +1,4 @@
+require File.join(File.dirname(__FILE__), 'tile.rb')
 
 class Game
   NUMBER_OF_ROWS = 4
@@ -19,6 +20,15 @@ class Game
 
   def grid
     @grid ||= build_grid
+  end
+
+  def guess selected_tile
+    #set guess_row and guess_column based on selected_tile
+    #look at string split
+    guess_row = 0 #fix this  
+    guess_column = 0  #fix this
+    guessed_tile = @grid[guess_row][guess_column]
+    guessed_tile.select!
   end
 
 end

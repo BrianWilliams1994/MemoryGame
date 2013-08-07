@@ -1,4 +1,4 @@
-require './lib/game.rb'
+require File.join(File.dirname(__FILE__), '/lib/game.rb')
 require 'sinatra'
 
 configure do
@@ -16,5 +16,6 @@ get '/' do
 end
 
 post '/guess' do
+  @@game.guess(params.keys)
   erb :index
 end
