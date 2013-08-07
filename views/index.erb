@@ -21,7 +21,7 @@
 			
     <form method='post' action='/guess'>
 			<table>
-        <% game.rows.each do |row| %>
+        <% game.grid.each do |row| %>
           <tr>
             <% row.each do |card| %>
               <th><%= card %></th>
