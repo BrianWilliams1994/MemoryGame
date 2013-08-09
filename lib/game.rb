@@ -22,11 +22,13 @@ class Game
     @grid ||= build_grid
   end
 
+  #selected_tile will be in the format "0_1"
   def guess selected_tile
     #set guess_row and guess_column based on selected_tile
     #look at string split
-    guess_row = 0 #fix this  
-    guess_column = 0  #fix this
+    #convert strings to integers
+    guess_row = selected_tile.split(",").first 
+    guess_column = selected_tile.split(",").last
     guessed_tile = @grid[guess_row][guess_column]
     guessed_tile.select!
   end
