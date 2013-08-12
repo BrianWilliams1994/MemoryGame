@@ -6,6 +6,10 @@ class Tile
   end
   
   def select!
-    
+    @selected = true
+  end
+
+  def selected?
+    @selected
   end
 end

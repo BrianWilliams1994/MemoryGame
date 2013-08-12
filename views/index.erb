@@ -25,8 +25,18 @@
           <tr>
             <% row.each_with_index do |card, column_number| %>
               <th>
-                <input type='radio' name='<%="#{row_number}_#{column_number}"%>'>
-                <%= card.name %>
+                <% if card.selected? %>
+                  <% # TODO %>
+                  <% # formatting is a little confused when a card is selected %>
+                  <% # make it look however you want%>
+                  <input type='radio' checked='#{card.selected?}' name='<%="#{row_number}_#{column_number}"%>'>
+                  <%= card.name %>
+                <% else %>
+                  <% # TODO %>
+                  <% # display the default card view %>
+                  <% # don't show name %>
+                  <input type='radio' name='<%="#{row_number}_#{column_number}"%>'>
+                <% end %> 
               </th>
             <%end%>
 			  </tr>
